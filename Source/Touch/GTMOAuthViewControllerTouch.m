@@ -648,19 +648,8 @@ finishedWithAuth:(GTMOAuthAuthentication *)auth
   [self updateUI];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-  BOOL value = YES;
-  if (!isInsideShouldAutorotateToInterfaceOrientation_) {
-    isInsideShouldAutorotateToInterfaceOrientation_ = YES;
-    UIViewController *navigationController = [self navigationController];
-    if (navigationController != nil) {
-      value = [navigationController shouldAutorotateToInterfaceOrientation:interfaceOrientation];
-    } else {
-      value = [super shouldAutorotateToInterfaceOrientation:interfaceOrientation];
-    }
-    isInsideShouldAutorotateToInterfaceOrientation_ = NO;
-  }
-  return value;
+- (BOOL)shouldAutorotateToInterfaceOrientationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+  return YES;
 }
 
 
