@@ -648,7 +648,7 @@ finishedWithAuth:(GTMOAuthAuthentication *)auth
   [self updateUI];
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientationToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
   return YES;
 }
 
